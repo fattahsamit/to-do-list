@@ -38,7 +38,10 @@ const Login = () => {
               <button>Forgot Password?</button>
             </div>
           </div>
-          <button className="w-full text-white font-semibold bg-primary hover:bg-violet-500  py-3 rounded-md">
+          <button
+            type="submit"
+            className="w-full text-white font-semibold bg-primary hover:bg-violet-500  py-3 rounded-md"
+          >
             Sign in
           </button>
         </form>
