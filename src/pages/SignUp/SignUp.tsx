@@ -12,7 +12,7 @@ const initialValues = {
 };
 
 const SignUp = () => {
-  const { values, error, handleBlur, handleChange, handleSubmit } = useFormik({
+  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
     onSubmit: (values) => {
       console.log(values);
