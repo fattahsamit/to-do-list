@@ -17,11 +17,12 @@ const SignUp = () => {
     useFormik({
       initialValues: initialValues,
       validationSchema: signUpSchema,
-      onSubmit: (values) => {
+      onSubmit: (values, action) => {
         console.log(values);
+        action.resetForm();
       },
     });
-  console.log(errors);
+  // console.log(errors);
 
   return (
     <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
