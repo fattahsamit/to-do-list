@@ -6,7 +6,7 @@ interface PrivateRouteProps {
 const PrivateRoute = ({ children }: PrivateRouteProps): JSX.Element => {
   const storedLoginData = localStorage.getItem("login");
   const loginData = storedLoginData ? JSON.parse(storedLoginData) : null;
-  console.log(loginData);
+  // console.log(loginData);
   if (!loginData) {
     return <Navigate to="/login" replace={true}></Navigate>;
   } else if (loginData?.email) {
