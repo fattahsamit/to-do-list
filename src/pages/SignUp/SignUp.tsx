@@ -13,22 +13,15 @@ const initialValues = {
 };
 
 const SignUp = () => {
-  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
-    initialValues: initialValues,
-    validationSchema: signUpSchema,
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: signUpSchema,
+      onSubmit: (values) => {
+        console.log(values);
+      },
+    });
   console.log(errors);
-  const {
-    first_name,
-    last_name,
-    user_name,
-    email,
-    password,
-    confirm_password,
-  } = errors;
 
   return (
     <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
@@ -53,7 +46,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{first_name}</p>
+            {errors.first_name && touched.first_name ? (
+              <p className="text-error">{errors.first_name}</p>
+            ) : null}
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="last_name" className="block text-gray-400">
@@ -70,7 +65,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{last_name}</p>
+            {errors.last_name && touched.last_name ? (
+              <p className="text-error">{errors.last_name}</p>
+            ) : null}
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="user_name" className="block text-gray-400">
@@ -87,7 +84,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{user_name}</p>
+            {errors.user_name && touched.user_name ? (
+              <p className="text-error">{errors.user_name}</p>
+            ) : null}
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="email" className="block text-gray-400">
@@ -104,7 +103,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{email}</p>
+            {errors.email && touched.email ? (
+              <p className="text-error">{errors.email}</p>
+            ) : null}
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="password" className="block text-gray-400">
@@ -121,7 +122,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{password}</p>
+            {errors.password && touched.password ? (
+              <p className="text-error">{errors.password}</p>
+            ) : null}
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="confirm_password" className="block text-gray-400">
@@ -138,7 +141,9 @@ const SignUp = () => {
               onBlur={handleBlur}
               className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
             />
-            <p className="text-error">{confirm_password}</p>
+            {errors.confirm_password && touched.confirm_password ? (
+              <p className="text-error">{errors.confirm_password}</p>
+            ) : null}
             <div className="flex justify-end text-xs text-gray-400">
               <button>Forgot Password?</button>
             </div>
