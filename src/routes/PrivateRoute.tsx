@@ -1,6 +1,7 @@
-import React from "react";
-
-const PrivateRoute = ({ children }) => {
+interface PrivateRouteProps {
+  children: React.ReactNode;
+}
+const PrivateRoute = ({ children }: PrivateRouteProps) => {
   return <div>{children}</div>;
 };
 
