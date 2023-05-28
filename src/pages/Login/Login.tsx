@@ -15,7 +15,7 @@ const Login = () => {
       onSubmit: (values, action) => {
         console.log(values);
         // Check if the userdata is in localstorage
-        const storedSignupData = localStorage.getItem("form");
+        const storedSignupData = localStorage.getItem("signup");
         if (storedSignupData) {
           const signupData = JSON.parse(storedSignupData);
           if (
@@ -23,19 +23,21 @@ const Login = () => {
             values.password === signupData.password
           ) {
             console.log("Login successful");
+            localStorage.setItem("login", JSON.stringify(values));
           } else {
             console.log("Login not successful");
           }
         } else {
           console.log("Signup data not found in localstorage");
         }
+
         action.resetForm();
       },
     });
 
   return (
     <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
-      <div>
+      <div className="hidden lg:block">
         <h2 className="text-5xl">Login</h2>
       </div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl border-2 shadow-md">

@@ -19,14 +19,14 @@ const SignUp = () => {
       validationSchema: signUpSchema,
       onSubmit: (values, action) => {
         console.log(values);
-        localStorage.setItem("form", JSON.stringify(values));
+        localStorage.setItem("signup", JSON.stringify(values));
         action.resetForm();
       },
     });
 
   return (
     <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
-      <div>
+      <div className="hidden lg:block">
         <h2 className="text-5xl">Sign Up</h2>
       </div>
       <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 shadow-md">
