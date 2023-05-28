@@ -14,6 +14,21 @@ const Login = () => {
       validationSchema: loginSchema,
       onSubmit: (values, action) => {
         console.log(values);
+        // Check if the userdata is in localstorage
+        const storedSignupData = localStorage.getItem("form");
+        if (storedSignupData) {
+          const signupData = JSON.parse(storedSignupData);
+          if (
+            values.email === signupData.email &&
+            values.password === signupData.password
+          ) {
+            console.log("Login successful");
+          } else {
+            console.log("Login not successful");
+          }
+        } else {
+          console.log("Signup data not found in localstorage");
+        }
         action.resetForm();
       },
     });

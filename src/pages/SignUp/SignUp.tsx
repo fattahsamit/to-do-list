@@ -19,6 +19,7 @@ const SignUp = () => {
       validationSchema: signUpSchema,
       onSubmit: (values, action) => {
         console.log(values);
+        localStorage.setItem("form", JSON.stringify(values));
         action.resetForm();
       },
     });
