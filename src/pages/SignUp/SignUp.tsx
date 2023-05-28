@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
@@ -91,7 +90,7 @@ const SignUp = () => {
               <button>Forgot Password?</button>
             </div>
           </div>
-          <button className="w-full text-white text-medium bg-primary hover:bg-violet-500 py-3 rounded-md">
+          <button className="w-full text-white font-semibold bg-primary hover:bg-violet-500 py-3 rounded-md">
             Sign up
           </button>
         </form>

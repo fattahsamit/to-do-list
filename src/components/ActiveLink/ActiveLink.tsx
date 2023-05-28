@@ -1,7 +1,11 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
-const ActiveLink = ({ children, to }) => {
+interface PrivateRouteProps {
+  children: string;
+  to: string;
+}
+
+const ActiveLink = ({ children, to }: PrivateRouteProps) => {
   return (
     <NavLink
       to={to}
