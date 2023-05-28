@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 // import * as Yup from "yup";
 
-export const signUpSchema = Yup.Object({
+export const signUpSchema = Yup.object({
   first_name: Yup.string()
     .min(2)
     .max(25)
@@ -16,5 +16,7 @@ export const signUpSchema = Yup.Object({
     .required("Please enter your user name"),
   email: Yup.string().email().required("Please enter your email"),
   password: Yup.string().min(6).required("Please enter your password"),
-  //   confirm_password: Yup.string().required().oneOf(),
+  confirm_password: Yup.string()
+    .required("Please confirm your password")
+    .oneOf([Yup.ref("password"), null], "Password must match"),
 });
