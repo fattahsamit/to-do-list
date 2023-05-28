@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center">
+    <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
       <div>
         <h2 className="text-5xl">Login</h2>
       </div>
