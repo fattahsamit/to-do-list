@@ -9,6 +9,8 @@ import MainLayout from "./layout/MainLayout";
 import SignUp from "./pages/SignUp/SignUp";
 import App from "./App";
 import PrivateRoute from "./routes/PrivateRoute";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,9 @@ const router = createBrowserRouter([
         path: "app",
         element: (
           <PrivateRoute>
-            <App />
+            <Provider store={store}>
+              <App />
+            </Provider>
           </PrivateRoute>
         ),
       },
