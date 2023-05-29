@@ -5,7 +5,7 @@ interface TodoProps {
 
 const TodoItem = ({ title, completed }: TodoProps) => {
   return (
-    <li className={`${completed && "text-success"} my-4 p-2 border rounded`}>
+    <li className={`${completed && "text-success"} my-2 p-2 border rounded`}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <span className="flex items-center gap-5">
           <input type="checkbox" checked={completed}></input>

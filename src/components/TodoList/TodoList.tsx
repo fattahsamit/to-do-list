@@ -9,7 +9,7 @@ const TodoList = () => {
     { id: 5, title: "todo5", completed: true },
   ];
   return (
-    <ul className="text-xl w-full md:w-1/3 border p-5 rounded-md mx-auto">
+    <ul className="text-xl w-full md:w-1/3 mx-auto">
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}

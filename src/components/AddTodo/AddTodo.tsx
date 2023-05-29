@@ -1,12 +1,12 @@
 const AddTodo = () => {
   return (
-    <section className="my-4 p-6 text-center">
+    <section className="pt-6 text-center">
       <h1 className="text-4xl font-semibold">To Do List</h1>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-3 my-5">
         <input
           type="text"
-          name="username"
-          id="username"
+          name="todo"
+          id="todo"
           placeholder="Add todo"
           required
           className="px-4 py-3 rounded-md border text-gray-500"
