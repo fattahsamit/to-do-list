@@ -9,11 +9,16 @@ const TodoCompleted = () => {
   );
 
   return (
-    <div>
-      <h4 className="my-3 text-lg">
+    <>
+      <h4 className="my-3 text-lg ">
         Todos Completed: {completedTodos.length}/{totalTodos.length}
       </h4>
-    </div>
+      {completedTodos.length === totalTodos.length ? (
+        <p className="text-center text-lg text-success">
+          Congratulations! You have completed all your tasks.
+        </p>
+      ) : null}
+    </>
   );
 };
 
