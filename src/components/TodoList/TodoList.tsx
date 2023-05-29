@@ -1,7 +1,7 @@
 import TodoItem from "../TodoItem/TodoItem";
 import { useSelector } from "react-redux";
 
-interface todoProps {
+interface TodoProps {
   id: number;
   title: string;
   completed: boolean;
@@ -21,9 +21,10 @@ const TodoList = () => {
 
   return (
     <ul className="text-xl w-full md:w-1/3 mx-auto">
-      {todos.map((todo: todoProps) => (
+      {todos.map((todo: TodoProps) => (
         <TodoItem
           key={todo.id}
+          id={todo.id}
           title={todo.title}
           completed={todo.completed}
         ></TodoItem>
