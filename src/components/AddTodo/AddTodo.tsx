@@ -10,11 +10,6 @@ const initialValues = {
 const AddTodo = () => {
   const dispatch = useDispatch();
 
-  // const handleSubmit = (event: any) => {
-  //   event.preventDefault();
-  //   dispatch(addTodo({}));
-  // };
-
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues,

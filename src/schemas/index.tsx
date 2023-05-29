@@ -27,5 +27,5 @@ export const loginSchema = Yup.object({
 });
 
 export const todoSchema = Yup.object({
-  todo: Yup.string().required(),
+  todo: Yup.string().min(2).max(30).required("Please add your todo"),
 });
