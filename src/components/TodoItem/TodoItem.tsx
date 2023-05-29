@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { toggleComplete } from "../../redux/todoSlice";
+import { toggleComplete, deleteTodo } from "../../redux/todoSlice";
 
 interface TodoProps {
   id: number;
@@ -14,6 +14,10 @@ const TodoItem = ({ id, title, completed }: TodoProps) => {
     dispatch(toggleComplete({ id: id, completed: !completed }));
   };
 
+  const handleDelete = () => {
+    dispatch(deleteTodo({ id: id }));
+  };
+
   return (
     <li className={`${completed && "border-success"} my-2 p-2 border rounded`}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
@@ -25,7 +29,10 @@ const TodoItem = ({ id, title, completed }: TodoProps) => {
           ></input>
           {title}
         </span>
-        <button className="text-white px-2 py-1 rounded-md bg-error">
+        <button
+          onClick={handleDelete}
+          className="text-white px-2 py-1 rounded-md bg-error"
+        >
           Delete
         </button>
       </div>
