@@ -25,10 +25,7 @@ const SignUp = () => {
     });
 
   return (
-    <div className="flex gap-5 justify-around min-h-[calc(100vh-64px)] items-center my-5">
-      <div className="hidden lg:block">
-        <h2 className="text-5xl">Sign Up</h2>
-      </div>
+    <div className="flex justify-around min-h-[calc(100vh-64px)] items-center m-5">
       <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 shadow-md">
         <h1 className="text-3xl font-bold text-center text-primary">Signup</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
