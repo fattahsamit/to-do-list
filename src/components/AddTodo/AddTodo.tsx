@@ -22,11 +22,11 @@ const AddTodo = () => {
     });
 
   return (
-    <section className="pt-6 text-center">
+    <section className="pt-16 text-center">
       <h1 className="text-4xl font-semibold dark:text-slate-100">To Do List</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex items-center justify-center gap-2 my-5"
+        className="flex items-center justify-center gap-2 my-6"
       >
         <input
           type="text"

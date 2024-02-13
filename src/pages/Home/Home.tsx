@@ -5,7 +5,7 @@ const Home = () => {
   const loginData = storedLoginData ? JSON.parse(storedLoginData) : null;
 
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-64px)] mx-5">
+    <div className="flex justify-center items-center min-h-[calc(100vh-64px)] mx-5 darkMode">
       <section className="max-w-2xl flex flex-col items-center gap-5 p-10 border dark:border-primary rounded-lg shadow-md text-3xl font-bold text-neutral dark:text-slate-100">
         <h2 className="text-5xl">Hello!</h2>
         {loginData ? (
