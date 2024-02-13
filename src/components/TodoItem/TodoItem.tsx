@@ -19,7 +19,11 @@ const TodoItem = ({ id, title, completed }: TodoProps) => {
   };
 
   return (
-    <li className={`${completed && "border-success"} my-2 p-2 border rounded`}>
+    <li
+      className={`${
+        completed && "border-success dark:border-primary"
+      } m-3 p-2 border rounded dark:text-slate-100`}
+    >
       <div className="flex flex-col md:flex-row justify-between gap-5">
         <span className="flex items-center gap-5">
           <input
@@ -31,7 +35,7 @@ const TodoItem = ({ id, title, completed }: TodoProps) => {
         </span>
         <button
           onClick={handleDelete}
-          className="text-white px-2 py-1 rounded-md bg-error"
+          className="text-white px-2 py-1 rounded-md bg-error hover:bg-red-500"
         >
           Delete
         </button>

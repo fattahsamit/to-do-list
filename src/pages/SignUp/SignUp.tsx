@@ -25,8 +25,8 @@ const SignUp = () => {
     });
 
   return (
-    <div className="flex justify-around min-h-[calc(100vh-64px)] items-center m-5">
-      <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 shadow-md">
+    <div className="flex justify-around min-h-[calc(100vh-64px)] items-center mx-5">
+      <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 dark:border-primary shadow-md">
         <h1 className="text-3xl font-bold text-center text-primary">Signup</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-1 text-sm">
@@ -42,7 +42,7 @@ const SignUp = () => {
               value={values.first_name}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.first_name && touched.first_name ? (
               <p className="text-error">{errors.first_name}</p>
@@ -61,7 +61,7 @@ const SignUp = () => {
               value={values.last_name}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.last_name && touched.last_name ? (
               <p className="text-error">{errors.last_name}</p>
@@ -80,7 +80,7 @@ const SignUp = () => {
               value={values.user_name}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.user_name && touched.user_name ? (
               <p className="text-error">{errors.user_name}</p>
@@ -99,7 +99,7 @@ const SignUp = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.email && touched.email ? (
               <p className="text-error">{errors.email}</p>
@@ -118,7 +118,7 @@ const SignUp = () => {
               value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.password && touched.password ? (
               <p className="text-error">{errors.password}</p>
@@ -137,24 +137,24 @@ const SignUp = () => {
               value={values.confirm_password}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.confirm_password && touched.confirm_password ? (
               <p className="text-error">{errors.confirm_password}</p>
             ) : null}
-            <div className="flex justify-end text-xs text-gray-400">
+            {/* <div className="flex justify-end text-xs text-gray-400">
               <button>Forgot Password?</button>
-            </div>
+            </div> */}
           </div>
           <button
             type="submit"
-            className="w-full text-white font-semibold bg-primary hover:bg-violet-500 py-3 rounded-md"
+            className="w-full text-white text-lg font-semibold bg-primary hover:bg-violet-500 py-3 rounded-md"
           >
             Sign up
           </button>
         </form>
 
-        <p className="text-xs text-center sm:px-6 text-gray-400">
+        <p className="text-center sm:px-6 text-gray-400">
           Already have an account?{" "}
           <Link to="/login" className="text-primary">
             <span>Sign In</span>

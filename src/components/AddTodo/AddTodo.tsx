@@ -23,10 +23,10 @@ const AddTodo = () => {
 
   return (
     <section className="pt-6 text-center">
-      <h1 className="text-4xl font-semibold">To Do List</h1>
+      <h1 className="text-4xl font-semibold dark:text-slate-100">To Do List</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col lg:flex-row items-center justify-center gap-3 my-5"
+        className="flex items-center justify-center gap-2 my-5"
       >
         <input
           type="text"
@@ -36,11 +36,11 @@ const AddTodo = () => {
           value={values.todo}
           onChange={handleChange}
           onBlur={handleBlur}
-          className="px-4 py-3 rounded-md border text-gray-500"
+          className="px-4 py-3 rounded-md border text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
         />
         <button
           type="submit"
-          className="py-3 px-4 text-white font-semibold bg-primary hover:bg-violet-500 rounded-md"
+          className="py-3 px-5 text-white font-semibold bg-primary hover:bg-violet-500 rounded-md"
         >
           Add
         </button>

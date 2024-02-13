@@ -10,11 +10,11 @@ const TodoCompleted = () => {
 
   return (
     <>
-      <h4 className="my-3 text-lg ">
+      <h4 className="my-3 text-xl font-semibold dark:text-slate-100">
         Todos Completed: {completedTodos.length}/{totalTodos.length}
       </h4>
       {completedTodos.length === totalTodos.length ? (
-        <p className="text-center text-lg text-success">
+        <p className="text-center text-xl font-semibold text-success dark:text-primary">
           Congratulations! You have completed all your tasks.
         </p>
       ) : null}

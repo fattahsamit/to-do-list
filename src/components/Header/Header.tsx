@@ -2,7 +2,7 @@ import ActiveLink from "../ActiveLink/ActiveLink";
 
 const Header = () => {
   return (
-    <nav className="bg-violet-200 py-5 flex justify-around items-center text-neutral font-medium sticky top-0 z-10">
+    <nav className="bg-violet-100 dark:bg-gray-800 py-5 flex justify-around items-center shadow-lg text-neutral dark:text-slate-200 lg:text-xl font-medium sticky top-0 z-10">
       <ul>
         <li>
           <ActiveLink to="/">Home</ActiveLink>

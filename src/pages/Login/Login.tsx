@@ -36,8 +36,8 @@ const Login = () => {
     });
 
   return (
-    <div className="flex justify-center min-h-[calc(100vh-64px)] items-center m-5">
-      <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 shadow-md">
+    <div className="flex justify-center min-h-[calc(100vh-64px)] items-center mx-5">
+      <div className="w-full max-w-lg p-8 space-y-3 rounded-xl border-2 dark:border-primary shadow-md">
         <h1 className="text-3xl font-bold text-center text-primary">Login</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-1 text-sm">
@@ -53,7 +53,7 @@ const Login = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.email && touched.email ? (
               <p className="text-error">{errors.email}</p>
@@ -72,24 +72,24 @@ const Login = () => {
               value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
-              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500"
+              className="w-full px-4 py-3 rounded-md border border-gray-400 text-gray-500 dark:text-slate-100 dark:border-primary dark:bg-gray-800"
             />
             {errors.password && touched.password ? (
               <p className="text-error">{errors.password}</p>
             ) : null}
-            <div className="flex justify-end text-xs text-gray-400">
+            {/* <div className="flex justify-end text-xs text-gray-400">
               <button>Forgot Password?</button>
-            </div>
+            </div> */}
           </div>
           <button
             type="submit"
-            className="w-full text-white font-semibold bg-primary hover:bg-violet-500  py-3 rounded-md"
+            className="w-full text-white text-lg font-semibold bg-primary hover:bg-violet-500  py-3 rounded-md"
           >
-            Sign in
+            Log in
           </button>
         </form>
 
-        <p className="text-xs text-center sm:px-6 text-gray-400">
+        <p className="text-center sm:px-6 text-gray-400">
           Don't have an account?{" "}
           <Link to="/signup" className="text-primary">
             <span>Register</span>
