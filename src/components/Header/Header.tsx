@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
           <ActiveLink to="/signup">Signup</ActiveLink>
         </li>
         <button
-          className="bg-primary text-white px-3 py-2 rounded-lg"
+          className="bg-primary hover:bg-violet-500 text-white px-3 py-2 rounded-lg"
           onClick={toggleDarkMode}
         >
           {darkMode ? "Light" : "Dark"}

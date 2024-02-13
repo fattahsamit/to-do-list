@@ -10,6 +10,7 @@ This is a simple To-Do List web application built with React, React Router, Redu
 - Create tasks: Users can add new tasks to their to-do list.
 - Mark tasks as complete: Users can mark tasks as completed.
 - Delete tasks: Users can delete tasks from their to-do list.
+- Dark Mode: Users can switch between Light & Dark mode.
 
 ## Technologies Used
 
