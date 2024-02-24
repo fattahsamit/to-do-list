@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo } from "../../redux/todoSlice";
+import { useAppDispatch } from "../../redux/store";
 
 interface TodoProps {
   id: number;
@@ -8,7 +8,7 @@ interface TodoProps {
 }
 
 const TodoItem = ({ id, title, completed }: TodoProps) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleComplete = () => {
     dispatch(toggleComplete({ id: id, completed: !completed }));

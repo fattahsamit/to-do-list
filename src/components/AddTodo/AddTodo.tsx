@@ -1,14 +1,14 @@
-import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/todoSlice";
 import { useFormik } from "formik";
 import { todoSchema } from "../../schemas";
+import { useAppDispatch } from "../../redux/store";
 
 const initialValues = {
   todo: "",
 };
 
 const AddTodo = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({

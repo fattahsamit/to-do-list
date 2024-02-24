@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
+import { useAppSelector } from "../../redux/store";
 
 const TodoCompleted = () => {
-  const completedTodos = useSelector((state: any) =>
-    state.todos.filter((todo: any) => todo.completed === true)
+  const completedTodos = useAppSelector((state) =>
+    state.todos.filter((todo) => todo.completed === true)
   );
-  const totalTodos = useSelector((state: any) =>
-    state.todos.filter((todo: any) => todo)
-  );
+  const totalTodos = useAppSelector((state) => state.todos);
 
   return (
     <>

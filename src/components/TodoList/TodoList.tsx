@@ -1,5 +1,5 @@
+import { useAppSelector } from "../../redux/store";
 import TodoItem from "../TodoItem/TodoItem";
-import { useSelector } from "react-redux";
 
 interface TodoProps {
   id: number;
@@ -8,7 +8,7 @@ interface TodoProps {
 }
 
 const TodoList = () => {
-  const todos = useSelector((state: any) => state.todos);
+  const todos = useAppSelector((state) => state.todos);
 
   // Dummy List
   // const todos = [
@@ -21,7 +21,7 @@ const TodoList = () => {
 
   return (
     <ul className="text-xl w-full md:w-1/3 mx-auto">
-      {todos.map((todo: TodoProps) => (
+      {todos.map((todo) => (
         <TodoItem
           key={todo.id}
           id={todo.id}
